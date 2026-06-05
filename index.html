@@ -203,29 +203,35 @@
                   </div>
                 </td>
               </tr>
-              <tr>
-                <td>AWS (in progress)</td>
-                <td style="font-size:10px;color:var(--accent)">Learning</td>
-                <td>
-                  <div class="bar">
-                    <div class="bar-f" style="width:28%"></div>
-                  </div>
-                </td>
-              </tr>
+
             </tbody>
           </table>
 
-          <!-- What's Next / In the Pipeline -->
+          <!-- Currently Studying -->
           <hr class="rule-l" style="margin-top:11px;">
           <div class="pipeline-box">
-            <div class="pipeline-title">&#9654;&nbsp; In the Pipeline</div>
-            <p class="pipeline-intro">Next chapters on the developer's roadmap — currently in active study and build.
-            </p>
+            <div class="pipeline-title">&#9654;&nbsp; Currently Studying</div>
+            <p class="pipeline-intro">Active skill acquisition and technological exploration in progress.</p>
             <ul class="pipeline-list">
-              <li><span class="pipeline-tag">CERT</span> AWS Solutions Architect Associate</li>
-              <li><span class="pipeline-tag">BUILD</span> Docker &amp; container fundamentals</li>
-              <li><span class="pipeline-tag">MIGRATE</span> TypeScript refactor of existing projects</li>
-              <li><span class="pipeline-tag">LEARN</span> Terraform &amp; infrastructure-as-code</li>
+              <li style="flex-direction: column; align-items: flex-start; gap: 4px; padding: 8px 0;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="pipeline-tag">CLOUD</span>
+                  <strong style="color: #fff">AWS Solutions Architect Associate</strong>
+                </div>
+                <div style="font-size: 10.5px; line-height: 1.4; color: #c0b8a8; margin-top: 2px;">
+                  Mastering scalable cloud architecture, high availability patterns, and secure infrastructure design.
+                </div>
+              </li>
+              <li
+                style="flex-direction: column; align-items: flex-start; gap: 4px; padding: 8px 0; border-bottom: none;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="pipeline-tag">AI</span>
+                  <strong style="color: #fff">AI Agents &amp; Orchestration</strong>
+                </div>
+                <div style="font-size: 10.5px; line-height: 1.4; color: #c0b8a8; margin-top: 2px;">
+                  Exploring autonomous agent frameworks and LLM integrations to build intelligent, workflow-agents
+                </div>
+              </li>
             </ul>
           </div>
         </article>
@@ -265,50 +271,14 @@
             </div>
           </div>
 
-          <p class="body drop">Designed to be a highly reusable, beautifully styled platform, this serverless
-            application eliminates hardcoded HTML. Instead, it provides a secure, authenticated Admin Dashboard where
-            professionals can dynamically add, edit, and categorize their work in real-time. The public view features
-            stunning glassmorphism design tokens and micro-animations.</p>
+          <p class="body drop">The core problem was eliminating hardcoded HTML and legacy PHP hosting costs for portfolio management. A 100% serverless architecture was engineered using Firebase Cloud Functions and Firestore to create a dynamic, secure Admin Dashboard.</p>
           <button class="expand-btn" data-target="admin-full">Read Full Story ▼</button>
 
           <div class="article-full" id="admin-full">
-            <div class="news-infographic" style="margin-top:8px; margin-bottom:12px;">
-              <div class="infographic-title" style="background:var(--accent)">Live Dashboard Access</div>
-              <div class="infographic-grid">
-                <div class="infographic-row">
-                  <span class="infographic-key">Live URL</span>
-                  <span class="infographic-val" style="font-family:var(--mono); font-size:10.5px;"><a
-                      href="https://gs-admin-project-managment.netlify.app/admin" target="_blank"
-                      style="color:var(--ink2);">gs-admin-project-managment.netlify.app</a></span>
-                </div>
-                <div class="infographic-row">
-                  <span class="infographic-val" style="font-family:var(--mono); font-size:10.5px;">Anyone can create an
-                    account and test all the features by themselves.</span>
-                </div>
-              </div>
-              <p class="body" style="font-size:10.5px; margin-top:6px; line-height:1.4;"><strong>⏱️ 15-Minute
-                  Auto-Delete
-                  Rule:</strong> Anything you create inside the dashboard is automatically wiped after 15 minutes via a
-                Firebase Cloud Function — so feel free to add, edit, and delete projects without holding back. The
-                dashboard always resets itself.</p>
-            </div>
-
             <h4 class="hl4"
               style="margin-top:4px;margin-bottom:6px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.04em;">
-              Technical Highlights &amp; Security</h4>
-            <p class="body">The system successfully migrated from a legacy PHP backend to Firebase, eliminating hosting
-              costs. It features complete CRUD capabilities for projects and custom categories, secure image uploading
-              via Firebase Storage, and strict Firestore security rules with CORS configuration ensuring only
-              authenticated admins can manipulate data.
-            </p>
-            <p class="body"
-              style="margin-top:7px;font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.04em">STACK:
-              React · Vite · Firebase Auth · Firestore · Cloud Functions</p>
-            <div style="display:flex; gap:12px; margin-top:8px;">
-              <a class="proj-link hover-underline" href="https://gs-admin-project-managment.netlify.app/admin"
-                target="_blank">&rarr; LIVE DASHBOARD</a>
-              <a class="proj-link hover-underline" href="#" target="_blank">&rarr; GITHUB REPO</a>
-            </div>
+              Implementation Detail: The 15-Minute Rule</h4>
+            <p class="body">To safely allow public write access to the live dashboard demo without database bloat, an automated 15-minute data-wipe Cloud Function was developed. Any data created by a guest user is systematically purged, ensuring the dashboard permanently resets itself.</p>
           </div>
         </article>
 
@@ -320,20 +290,14 @@
           <div class="story-preview-box">
             <div class="hl3">ACS: Industrial Web Platform for Automation Firm</div>
             <div class="byline" style="font-size:8px"><span class="byloc">INDUSTRY DESK</span></div>
-            <p class="body" style="font-size:11px">A complete web presence for a Jaipur-based industrial automation
-              firm, modernising service discovery, inquiry handling, and job applications.</p>
+            <p class="body" style="font-size:11px">Modernising service discovery, inquiry handling, and job applications for a Jaipur-based industrial automation firm.</p>
             <button class="expand-btn" data-target="acs-side">Read More &#9660;</button>
 
             <div class="article-full" id="acs-side">
               <h4 class="hl4"
                 style="margin-top:4px;margin-bottom:6px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.04em;">
-                Technical Highlights</h4>
-              <p class="body" style="font-size:11px">Responsive React UI with RESTful APIs via Node.js and Express.js,
-                featuring secure direct email delivery. Deployed live on Netlify and Render.</p>
-              <p class="body" style="font-size:10.5px;margin-top:6px;font-family:var(--mono);color:var(--ink3)">STACK:
-                React · Node.js · Express.js</p>
-              <a class="proj-link hover-underline" href="https://lnkd.in/gwSQ_-MP" target="_blank">→ LIVE SITE:
-                lnkd.in/gwSQ_-MP</a>
+                Architecture &amp; Email Delivery</h4>
+              <p class="body" style="font-size:11px">A custom React UI backed by RESTful APIs using Node.js and Express.js was chosen for full control over data flow. Crucially, secure direct email delivery was implemented via backend routing to bypass the unreliability of third-party frontend mailers.</p>
             </div>
           </div>
 
@@ -343,9 +307,7 @@
           <div class="story-preview-box">
             <div class="hl3">GS Paint: Full-Featured Browser Painting App with Watercolour &amp; Touch Support</div>
             <div class="byline" style="font-size:8px"><span class="byloc">TECHNOLOGY DESK</span></div>
-            <p class="body" style="font-size:11px">Canvas API-powered painting suite with pencil, marker, watercolour,
-              and airbrush tools. Adjustable opacity, shape primitives, unlimited undo/redo, and full touch event
-              support for tablet artists.</p>
+            <p class="body" style="font-size:11px">Solving the problem of bloated web applications, this project aimed to create a fully functional, cross-device painting suite without relying on massive external canvas libraries.</p>
             <!-- GS Paint Tool Palette Infographic -->
             <div class="news-infographic" style="margin:8px 0;">
               <div class="infographic-title">Tool Palette</div>
@@ -365,14 +327,8 @@
             <div class="article-full" id="gspaint">
               <h4 class="hl4"
                 style="margin-top:4px;margin-bottom:6px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.04em;">
-                Detailed Specifications &amp; Live Link</h4>
-              <p class="body" style="font-size:11px">An eraser tool and fill bucket complete the editing suite. An
-                unlimited undo/redo stack handles complex multi-step artwork without data loss. Touch events are fully
-                supported across mobile and tablet devices without a separate codebase.</p>
-              <p class="body" style="font-size:10.5px;margin-top:6px;font-family:var(--mono);color:var(--ink3)">STACK:
-                Canvas API · Vanilla JS · Touch Events</p>
-              <a class="proj-link hover-underline" href="https://gs-paint.netlify.app/" target="_blank">→ LIVE DEMO:
-                gs-paint.netlify.app</a>
+                Native APIs &amp; State Management</h4>
+              <p class="body" style="font-size:11px">The native HTML5 Canvas API paired with Vanilla JS was selected to ensure maximum performance and zero dependency overhead. A custom unlimited undo/redo stack was engineered to track canvas state changes without memory leaks, operating alongside a unified touch/mouse event handler.</p>
             </div>
           </div>
 
@@ -386,14 +342,11 @@
 
           <hr class="rule-l">
 
-          <!-- SaaS Dashboard brief -->
+          <!-- Forex Calculator brief -->
           <div class="story-preview-box">
-            <div class="hl4">SaaS Admin Dashboard: Dark Mode, Chart.js, Full Analytics</div>
-            <p class="body" style="font-size:11px">Responsive admin panel featuring Chart.js data visualisation, user
-              management tables, and a dark/light mode toggle. Demonstrates dashboard architecture for client pitches.
+            <div class="hl4">Forex Calculator: Calculating Volatile Assets</div>
+            <p class="body" style="font-size:11px">Needed a reliable way to calculate risk-based lot sizing across volatile asset classes. Integrated ExchangeRate-API for real-time currency conversion rather than static tables, and developed custom instrument-aware pip logic to automatically adjust decimal precision based on the asset type (standard pair vs JPY cross).
             </p>
-            <a class="proj-link hover-underline" href="https://gauravsharmaa.netlify.app/projects/saas-dashboard/"
-              target="_blank">→ VIEW PROJECT</a>
           </div>
 
 
@@ -422,13 +375,12 @@
               <span class="proj-card-tag" style="background:var(--accent)">Platform Engineering</span>
               <div class="proj-title" style="font-size:15px">Serverless Project Admin Dashboard</div>
               <div class="proj-tech">React · Vite · Firebase Cloud Functions · Firestore</div>
-              <div class="proj-body">A highly reusable, beautifully styled portfolio platform with a dynamic Admin
-                Dashboard. Eliminates hardcoded HTML by providing secure CRUD capabilities for project and section
-                management via Firebase Cloud Functions and Firestore. Features stunning glassmorphism design tokens,
-                micro-animations, secure cloud storage for images, and strict Firestore security rules for authenticated
-                admins.</div>
-              <a class="proj-link hover-underline" href="https://gs-admin-project-managment.netlify.app/admin"
-                target="_blank">→ LIVE DASHBOARD</a>
+              <div class="proj-body">Highly reusable portfolio platform with a dynamic, secure Admin Dashboard and glassmorphism UI.</div>
+              <div style="display: flex; gap: 12px; margin-top: 8px;">
+                <a class="proj-link hover-underline" href="https://gs-admin-project-managment.netlify.app/admin"
+                  target="_blank">→ LIVE DASHBOARD</a>
+                <a class="proj-link hover-underline" href="#" target="_blank">→ GITHUB REPO</a>
+              </div>
             </div>
 
             <!-- ACS: Professional Client Project -->
@@ -437,12 +389,12 @@
               <span class="proj-card-tag" style="background:#1d3a5f">Industrial Automation</span>
               <div class="proj-title" style="font-size:15px">Advanced Control System (ACS)</div>
               <div class="proj-tech">React · Node.js · Express.js · Netlify · Render</div>
-              <div class="proj-body">Full-stack web platform for a Jaipur-based industrial automation &amp; smart
-                building solutions firm. Covers service discovery, inquiry handling, and hiring workflows. Responsive
-                React UI, RESTful APIs, secure email-delivery forms, and documented codebase delivered on schedule.
+              <div class="proj-body">Professional web presence and inquiry platform for an industrial automation firm.</div>
+              <div style="display: flex; gap: 12px; margin-top: 8px;">
+                <a class="proj-link hover-underline" href="https://advancecontrolsystems.com" target="_blank">→ LIVE
+                  SITE: advancecontrolsystems.com</a>
+                <a class="proj-link hover-underline" href="#" target="_blank">→ GITHUB REPO</a>
               </div>
-              <a class="proj-link hover-underline" href="https://lnkd.in/gwSQ_-MP" target="_blank">→ LIVE SITE:
-                lnkd.in/gwSQ_-MP</a>
             </div>
 
             <!-- GS Paint: Highlighted Personal Flagship Project -->
@@ -450,11 +402,12 @@
               <span class="proj-card-tag" style="background:#6b3fa0">Creative Tool</span>
               <div class="proj-title">GS Paint</div>
               <div class="proj-tech">Canvas API &middot; Vanilla JS &middot; Touch Events</div>
-              <div class="proj-body">Full-featured browser painting app built on the Canvas API. Supports pencil,
-                marker, watercolour, and airbrush tools with adjustable opacity and brush size. Includes shape
-                primitives, fill bucket, eraser, and an unlimited undo/redo stack. Touch events fully supported.</div>
-              <a class="proj-link hover-underline" href="https://gs-paint.netlify.app/" target="_blank">&rarr; LIVE
-                DEMO</a>
+              <div class="proj-body">Full-featured browser painting application with custom brush tools and native touch support.</div>
+              <div style="display: flex; gap: 12px; margin-top: 8px;">
+                <a class="proj-link hover-underline" href="https://gs-paint.netlify.app/" target="_blank">&rarr; LIVE
+                  DEMO</a>
+                <a class="proj-link hover-underline" href="#" target="_blank">→ GITHUB REPO</a>
+              </div>
             </div>
 
 
@@ -463,10 +416,12 @@
               <span class="proj-card-tag" style="background:#1a5020">FinTech</span>
               <div class="proj-title">Forex Calculator Suite</div>
               <div class="proj-tech">JavaScript · ExchangeRate-API v6</div>
-              <div class="proj-body">Live P&amp;L and lot-sizing calculator covering all major FX pairs, Gold, and
-                Silver. Instrument-aware pip logic with risk-based lot sizing and real-time currency conversion.</div>
-              <a class="proj-link hover-underline" href="https://gs-forex-calculator.netlify.app/" target="_blank">→
-                LIVE DEMO</a>
+              <div class="proj-body">Live P&amp;L and lot-sizing calculator covering major FX pairs and precious metals.</div>
+              <div style="display: flex; gap: 12px; margin-top: 8px;">
+                <a class="proj-link hover-underline" href="https://gs-forex-calculator.netlify.app/" target="_blank">→
+                  LIVE DEMO</a>
+                <a class="proj-link hover-underline" href="#" target="_blank">→ GITHUB REPO</a>
+              </div>
             </div>
           </div>
         </article>
