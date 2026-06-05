@@ -9,10 +9,10 @@
 }
 
 :root {
-  --ink: #0a0a0a;
-  --ink2: #1e1e1e;
-  --ink3: #2a2a2a;
-  --ink4: #444444;
+  --ink: #000000;
+  --ink2: #050505;
+  --ink3: #111111;
+  --ink4: #1a1a1a;
   --paper: #dfdbcf;
   --paper2: #d5d1c4;
   --rule: #888070;
@@ -95,7 +95,7 @@ body {
 /* Newspaper Load In (Hot off the Press!) */
 .paper-container {
   opacity: 0;
-  transform: scale(0.95) translateY(40px) rotate(-1deg);
+  transform: translateY(40px);
   animation: paperEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   position: relative;
   background: var(--paper);
@@ -105,7 +105,7 @@ body {
 @keyframes paperEntrance {
   to {
     opacity: 1;
-    transform: scale(1) translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
 }
 
@@ -1027,7 +1027,7 @@ body {
 .proj-card {
   border: 1px solid var(--rule);
   padding: 10px;
-  background: var(--paper);
+  background: transparent;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
@@ -1041,7 +1041,7 @@ body {
 /* Professional Client Project Card — Special Highlight Treatment */
 .proj-card-pro {
   border: 2px solid #8b6914;
-  background: #fffdf5;
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -1072,9 +1072,9 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #6b4f10;
-  background: linear-gradient(90deg, #f5e9c0, #fdf6dc, #f5e9c0);
-  border: 1px solid #c9a84c;
+  color: var(--paper);
+  background: #8b6914;
+  border: 1px solid #6b4f10;
   padding: 4px 10px;
   margin-bottom: 8px;
   display: inline-block;
