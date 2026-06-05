@@ -11,12 +11,12 @@
 :root {
   --ink: #0a0a0a;
   --ink2: #1e1e1e;
-  --ink3: #3a3a3a;
-  --ink4: #5a5a5a;
-  --paper: #e8e6e0;
-  --paper2: #dedad3;
-  --rule: #c8c0b0;
-  --rule2: #e0d8cc;
+  --ink3: #2a2a2a;
+  --ink4: #444444;
+  --paper: #dfdbcf;
+  --paper2: #d5d1c4;
+  --rule: #888070;
+  --rule2: #9c9488;
   --accent: #b5000a;
   --accent2: #e8000f;
   --col-gap: 16px;
@@ -27,7 +27,20 @@
 
 /* Base Body Styles */
 html {
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.035) 0px, transparent 1px, transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.02) 0px, transparent 1px, transparent 5px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.04) 0px, transparent 1px, transparent 6px
+    );
   color: var(--ink);
   font-family: var(--body);
   scroll-behavior: smooth;
@@ -40,7 +53,20 @@ body {
   width: 900px;
   margin: 0;
   padding: 0;
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.035) 0px, transparent 1px, transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.02) 0px, transparent 1px, transparent 5px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.04) 0px, transparent 1px, transparent 6px
+    );
   position: relative;
   overflow-x: hidden;
 }
