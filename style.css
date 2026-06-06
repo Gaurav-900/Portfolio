@@ -2,7 +2,9 @@
    THE GAURAV SHARMA GAZETTE DESIGN SYSTEM & STYLES
    ========================================================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,54 +29,51 @@
 
 /* Base Body Styles */
 html {
-  background-color: var(--paper);
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(0,0,0,0.035) 0px, transparent 1px, transparent 3px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(0,0,0,0.02) 0px, transparent 1px, transparent 5px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(255,255,255,0.04) 0px, transparent 1px, transparent 6px
-    );
+  background-color: transparent;
+  background-image: url('img/background.png');
+  background-size: auto;
+  background-attachment: scroll;
+  background-repeat: repeat;
   color: var(--ink);
   font-family: var(--body);
   scroll-behavior: smooth;
-  width: 900px;
+  width: 100%;
+  min-width: 1024px;
   margin: 0;
   padding: 0;
 }
 
 body {
-  width: 900px;
+  width: 100%;
+  min-width: 1024px;
   margin: 0;
   padding: 0;
-  background-color: var(--paper);
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(0,0,0,0.035) 0px, transparent 1px, transparent 3px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(0,0,0,0.02) 0px, transparent 1px, transparent 5px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(255,255,255,0.04) 0px, transparent 1px, transparent 6px
-    );
+  background-color: transparent;
+  background-image: url('img/background.png');
+  background-size: auto;
+  background-attachment: scroll;
+  background-repeat: repeat;
   position: relative;
   overflow-x: hidden;
 }
 
 /* Center the newspaper on screens wider than 900px */
 @media (min-width: 901px) {
-  html, body {
+
+  html,
+  body {
     margin: 0 auto;
+  }
+}
+
+/* ── DESKTOP WIDESCREEN: expand to fill the full viewport ── */
+@media (min-width: 1200px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
@@ -91,7 +90,9 @@ body {
 }
 
 @keyframes grainEntrance {
-  to { opacity: 0.65; }
+  to {
+    opacity: 0.65;
+  }
 }
 
 /* ==========================================================================
@@ -103,7 +104,7 @@ body {
   opacity: 0;
   animation: paperEntrance 1.6s ease-in-out forwards;
   position: relative;
-  background: var(--paper);
+  background: transparent;
   padding-bottom: 20px;
 }
 
@@ -118,27 +119,27 @@ body {
   position: absolute;
   top: 70px;
   right: 25px;
-  transform: translate3d(0,0,0) rotate(-14deg) scale3d(3.5, 3.5, 1);
+  transform: translate3d(0, 0, 0) rotate(-14deg) scale3d(3.5, 3.5, 1);
   opacity: 0;
   z-index: 100;
   border: 3px double var(--accent);
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   padding: 2px;
   border-radius: 2px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  background: rgba(250, 248, 243, 0.95);
+  background: rgba(250, 248, 243, 0.10);
   pointer-events: none;
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.06);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.06);
   will-change: transform, opacity;
 }
 
 .stamp-inner {
   border: 1px solid var(--accent);
-  padding: 4px 10px;
+  padding: 4px 12px;
 }
 
 .ink-stamp.stamped {
@@ -148,15 +149,17 @@ body {
 @keyframes stampSlam {
   0% {
     opacity: 0;
-    transform: translate3d(0,0,0) rotate(-35deg) scale3d(3.5, 3.5, 1);
+    transform: translate3d(0, 0, 0) rotate(-35deg) scale3d(3.5, 3.5, 1);
   }
+
   75% {
     opacity: 0.9;
-    transform: translate3d(0,0,0) rotate(-16deg) scale3d(0.92, 0.92, 1);
+    transform: translate3d(0, 0, 0) rotate(-16deg) scale3d(0.92, 0.92, 1);
   }
+
   100% {
     opacity: 0.82;
-    transform: translate3d(0,0,0) rotate(-13deg) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) rotate(-13deg) scale3d(1, 1, 1);
   }
 }
 
@@ -173,9 +176,17 @@ body {
 }
 
 /* Delay grid columns for natural flow */
-.reveal-section .reveal-col:nth-child(1) { transition-delay: 0.05s; }
-.reveal-section .reveal-col:nth-child(2) { transition-delay: 0.18s; }
-.reveal-section .reveal-col:nth-child(3) { transition-delay: 0.3s; }
+.reveal-section .reveal-col:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.reveal-section .reveal-col:nth-child(2) {
+  transition-delay: 0.18s;
+}
+
+.reveal-section .reveal-col:nth-child(3) {
+  transition-delay: 0.3s;
+}
 
 /* Pulse animation for important alerts */
 .animate-pulse {
@@ -183,8 +194,15 @@ body {
 }
 
 @keyframes pulse {
-  0% { opacity: 0.85; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1.03); }
+  0% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
 }
 
 /* ==========================================================================
@@ -210,8 +228,18 @@ body {
 .mast-meta {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--ink3);
+  color: var(--ink);
+  font-weight: 500;
   letter-spacing: .04em;
+  flex: 1;
+}
+
+.mast-meta:first-child {
+  text-align: left;
+}
+
+.mast-meta:last-child {
+  text-align: right;
 }
 
 .mast-meta strong {
@@ -237,7 +265,7 @@ body {
 
 .mast-name {
   font-family: var(--head);
-  font-size: clamp(36px, 8vw, 70px);
+  font-size: clamp(28px, 6vw, 55px);
   font-weight: 900;
   color: var(--ink);
   letter-spacing: -.03em;
@@ -247,19 +275,20 @@ body {
 
 .mast-name span {
   display: block;
-  font-size: clamp(11px, 1.8vw, 14px);
-  font-weight: 400;
+  font-size: clamp(10px, 1.4vw, 12px);
+  font-weight: 500;
   font-style: italic;
   letter-spacing: .16em;
-  color: var(--ink3);
+  color: var(--ink);
   text-transform: none;
   margin-bottom: 3px;
 }
 
 .mast-sub {
   font-family: var(--mono);
-  font-size: 10.5px;
-  color: var(--ink3);
+  font-size: 9.5px;
+  color: var(--ink);
+  font-weight: 500;
   letter-spacing: .14em;
   text-transform: uppercase;
   margin-top: 5px;
@@ -356,8 +385,13 @@ body {
 }
 
 @keyframes tick {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 /* ==========================================================================
@@ -452,6 +486,43 @@ body {
   padding: 1px 6px;
 }
 
+/* ==========================================================================
+   NEWSPAPER PHOTOS
+   ========================================================================== */
+
+.news-photo-figure {
+  margin: 8px 0;
+  padding: 0;
+}
+
+.news-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--ink);
+  padding: 3px;
+  /* classic photo frame */
+  background: rgba(213, 213, 213, 0.4);
+  /* Vintage newspaper filter - less grayscale to show more color */
+  filter: grayscale(50%) contrast(110%) sepia(5%);
+  mix-blend-mode: multiply;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.news-photo-link {
+  display: block;
+  text-decoration: none;
+}
+
+.news-photo:hover {
+  filter: grayscale(0%) contrast(100%) sepia(0%);
+  mix-blend-mode: normal;
+  background: var(--paper);
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Thematic News Graphics */
 .news-graphic {
   background: var(--paper2);
@@ -466,7 +537,7 @@ body {
 .news-graphic-overlay {
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,.025) 5px, rgba(0,0,0,.025) 6px);
+  background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0, 0, 0, .025) 5px, rgba(0, 0, 0, .025) 6px);
 }
 
 .news-graphic-text {
@@ -484,7 +555,8 @@ body {
 
 .news-infographic {
   border: 1px solid var(--rule);
-  background: var(--paper2);
+  background: rgba(213, 213, 213, 0.60);
+  /* translucent var(--paper2) */
   padding: 8px 10px;
   position: relative;
 }
@@ -493,10 +565,8 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    45deg, transparent, transparent 6px,
-    rgba(0,0,0,.018) 6px, rgba(0,0,0,.018) 7px
-  );
+  background: repeating-linear-gradient(45deg, transparent, transparent 6px,
+      rgba(0, 0, 0, .018) 6px, rgba(0, 0, 0, .018) 7px);
   pointer-events: none;
 }
 
@@ -580,7 +650,8 @@ body {
 .checklist-box {
   border-left: 3px solid var(--accent);
   padding: 8px 10px;
-  background: var(--paper2);
+  background: rgba(213, 213, 213, 0.60);
+  /* translucent var(--paper2) */
   margin-top: 4px;
 }
 
@@ -690,7 +761,7 @@ body {
 
 /* Sidebar Experience Box */
 .experience-box {
-  background: rgba(0,0,0,0.035);
+  background: rgba(0, 0, 0, 0.035);
   border: 1px solid var(--rule);
   padding: 12px;
   border-radius: 2px;
@@ -701,7 +772,7 @@ body {
   font-size: 8.5px;
   font-weight: 700;
   letter-spacing: .08em;
-  background: rgba(0,0,0,0.04);
+  background: rgba(0, 0, 0, 0.04);
   color: var(--ink);
   border: 1px solid var(--rule2);
   padding: 1px 5px;
@@ -810,13 +881,14 @@ body {
 .body {
   font-family: var(--body);
   font-size: 13px;
-  color: var(--ink2);
+  color: var(--ink);
   line-height: 1.85;
   text-align: justify;
   text-justify: inter-word;
+  text-shadow: 0.2px 0.2px 0px rgba(0, 0, 0, 0.4);
 }
 
-.body + .body {
+.body+.body {
   margin-top: 7px;
 }
 
@@ -881,7 +953,8 @@ body {
 .profile-details {
   border: 1px solid var(--rule2);
   padding: 8px;
-  background: var(--paper2);
+  background: rgba(213, 213, 213, 0.60);
+  /* translucent var(--paper2) */
   border-radius: 2px;
   margin-top: 8px;
 }
@@ -1036,7 +1109,8 @@ body {
 }
 
 .article-full.open {
-  max-height: 800px; /* Safe upper bound for text content */
+  max-height: 800px;
+  /* Safe upper bound for text content */
   opacity: 1;
   margin-top: 8px;
   padding-top: 9px;
@@ -1056,7 +1130,8 @@ body {
 .proj-card {
   border: 1px solid var(--rule);
   padding: 10px;
-  background: transparent;
+  background: rgba(223, 223, 223, 0.40);
+  /* translucent var(--paper) */
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
@@ -1070,7 +1145,8 @@ body {
 /* Professional Client Project Card — Special Highlight Treatment */
 .proj-card-pro {
   border: 2px solid #8b6914;
-  background: transparent;
+  background: rgba(223, 223, 223, 0.40);
+  /* translucent var(--paper) */
   position: relative;
   overflow: hidden;
 }
@@ -1079,13 +1155,11 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 14px,
-    rgba(139, 105, 20, 0.03) 14px,
-    rgba(139, 105, 20, 0.03) 15px
-  );
+  background: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 14px,
+      rgba(139, 105, 20, 0.03) 14px,
+      rgba(139, 105, 20, 0.03) 15px);
   pointer-events: none;
 }
 
@@ -1214,7 +1288,8 @@ body {
 .bar-f {
   background: var(--ink);
   height: 4px;
-  width: 0%; /* Initial width for animation */
+  width: 0%;
+  /* Initial width for animation */
   transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1226,7 +1301,8 @@ body {
   border: 2px solid var(--ink);
   padding: 14px;
   margin-top: 18px;
-  background: var(--paper2);
+  background: rgba(213, 213, 213, 0.60);
+  /* translucent var(--paper2) */
 }
 
 .class-title {
@@ -1250,7 +1326,8 @@ body {
 .class-item {
   border: 1px solid var(--rule);
   padding: 9px;
-  background: var(--paper);
+  background: rgba(223, 223, 223, 0.60);
+  /* translucent var(--paper) */
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1279,8 +1356,9 @@ body {
 .class-body {
   font-family: var(--body);
   font-size: 12px;
-  color: var(--ink2);
+  color: var(--ink);
   line-height: 1.7;
+  text-shadow: 0.2px 0.2px 0px rgba(0, 0, 0, 0.4);
 }
 
 .class-ref {
@@ -1299,7 +1377,8 @@ body {
 .contact-box {
   border: 2px double var(--ink);
   padding: 14px;
-  background: var(--paper);
+  background: rgba(223, 223, 223, 0.60);
+  /* translucent var(--paper) */
 }
 
 .contact-form-title {
@@ -1330,7 +1409,8 @@ body {
 .f-input {
   width: 100%;
   border: 1px solid var(--rule);
-  background: var(--paper);
+  background: rgba(223, 223, 223, 0.60);
+  /* translucent var(--paper) */
   font-family: var(--body);
   font-size: 13px;
   color: var(--ink);
@@ -1342,8 +1422,9 @@ body {
 
 .f-input:focus {
   border-color: var(--ink);
-  background: var(--paper2);
-  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.05);
+  background: rgba(213, 213, 213, 0.70);
+  /* translucent var(--paper2) */
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .f-ta {
@@ -1369,7 +1450,7 @@ body {
 .submit:hover {
   background: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
 
 .submit:active {
@@ -1476,19 +1557,71 @@ body {
    RESPONSIVE DESIGN — TABLET & MOBILE
    ========================================================================== */
 
+/* Default: desktop-only elements are hidden —
+   they only appear inside the @media (min-width: 1200px) block */
+.desktop-bottom-row {
+  display: none;
+}
+
+.desktop-projects-col {
+  display: none;
+}
+
+.desktop-deliverables-summary {
+  display: none;
+}
+
+/* Mobile classifieds section is shown by default (hidden on desktop) */
+.mobile-classifieds-section {
+  display: block;
+}
+
 /* ── Tablet: 768px and below ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
 
-  body { max-width: 100%; }
+  html,
+  body {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    word-break: break-word;
+    overflow-x: hidden;
+  }
+
+  .paper-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
 
   /* Masthead */
-  .masthead { padding: 12px 14px 8px; }
-  .mast-top { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .mast-name { font-size: clamp(38px, 9vw, 60px); }
-  .mast-sub  { font-size: 9px; letter-spacing: .1em; }
+  .masthead {
+    padding: 12px 14px 8px;
+  }
+
+  .mast-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .mast-name {
+    font-size: clamp(38px, 9vw, 60px);
+  }
+
+  .mast-sub {
+    font-size: 9px;
+    letter-spacing: .1em;
+  }
 
   /* Nav — wrap into a 3-column button grid */
-  .mast-nav { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 8px; }
+  .mast-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 8px;
+  }
+
   .mast-nav a {
     border-right: 1px solid var(--rule2);
     border-bottom: 1px solid var(--rule2);
@@ -1497,125 +1630,726 @@ body {
     padding: 7px 4px;
     font-size: 10px;
   }
-  .mast-nav a:first-child { border-left: none; }
+
+  .mast-nav a:first-child {
+    border-left: none;
+  }
 
   /* Hide stamp on mobile — overlaps content */
-  .ink-stamp { display: none; }
+  .ink-stamp {
+    display: none;
+  }
 
   /* Main content padding */
-  .content { padding: 0 14px 24px; }
+  .content {
+    padding: 0 14px 24px;
+  }
 
-  /* ── Grid Columns ── */
-  /* Top 3-col: Index | ACS | Also Today — restack in reading order */
+  /* ── Grid Columns (Mobile Newspaper Layout) ── */
   .grid3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    border-bottom: 2px solid var(--rule2);
+    gap: 12px;
+  }
+
+  .grid3 .profile-col {
+    grid-column: 1;
+    grid-row: 1;
+    border-right: 1px solid var(--rule2);
+    padding-right: 12px !important;
+    padding-left: 0 !important;
+    padding-bottom: 14px;
     border-bottom: none;
   }
 
-  /* 2-col grids → single column */
-  .grid2, .grid2r { grid-template-columns: 1fr; }
+  .grid3 .lead-story-col {
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 12px !important;
+    padding-bottom: 14px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .grid3 .also-today-col {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    border-top: 2px solid var(--rule2);
+    border-bottom: none;
+    padding-top: 14px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .also-stories-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .also-stories-row .story-preview-box:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  /* 2-col grids → maintain 2 columns */
+  .grid2,
+  .grid2r {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 14px;
+  }
 
   /* Column spacing */
   .col {
-    padding: 14px 0;
+    padding: 14px 0 0 0 !important;
     border-right: none;
-    border-bottom: 2px solid var(--rule2);
-    padding-left: 0 !important;
+    border-bottom: none;
   }
-  .col:last-child { border-bottom: none; }
 
-  /* Reorder columns on mobile for best reading flow:
-     1. ACS Lead Story (col 2 on desktop) → show first
-     2. Index + Profile (col 1 on desktop) → show second
-     3. Also Today (col 3 on desktop) → show third */
-  .grid3 .reveal-col:nth-child(1) { order: 2; }
-  .grid3 .reveal-col:nth-child(2) { order: 1; }
-  .grid3 .reveal-col:nth-child(3) { order: 3; }
+  .grid2 .col:first-child,
+  .grid2r .col:first-child {
+    border-right: 1px solid var(--rule2);
+    padding-right: 12px !important;
+  }
+
+  .grid2 .col:last-child,
+  .grid2r .col:last-child {
+    padding-left: 12px !important;
+  }
 
   /* ── Typography ── */
-  .hl1 { font-size: clamp(26px, 7vw, 34px); }
-  .hl2 { font-size: clamp(18px, 5vw, 24px); }
-  .hl3 { font-size: 16px; }
-  .deck { font-size: 13px; }
-  .body { font-size: 13px; }
+  .hl1 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .hl2 {
+    font-size: clamp(16px, 4.5vw, 20px);
+  }
+
+  .hl3 {
+    font-size: 14px;
+  }
+
+  .hl4 {
+    font-size: 12px;
+  }
+
+  .deck {
+    font-size: 11.5px;
+  }
+
+  .body {
+    font-size: 11.5px;
+  }
+
+  .byline,
+  .date-text,
+  .label,
+  .proj-tech,
+  .class-body,
+  .class-ref {
+    font-size: 9.5px !important;
+  }
+
+  .mast-name {
+    font-size: clamp(32px, 8vw, 44px);
+  }
 
   /* ── Project Cards: 2-col on tablet ── */
-  .proj-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .proj-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
 
   /* Full-width pro cards still span full width */
-  .proj-card-pro { grid-column: 1 / -1; }
+  .proj-card-pro {
+    grid-column: 1 / -1;
+  }
 
   /* ── Classifieds: 2-col on tablet ── */
-  .class-grid { grid-template-columns: 1fr 1fr; }
+  .class-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 
   /* ── Infographic rows wrap more gracefully ── */
-  .infographic-row { flex-wrap: wrap; gap: 4px; }
-  .infographic-key { width: auto; min-width: 60px; }
+  .infographic-row {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .infographic-key {
+    width: auto;
+    min-width: 60px;
+  }
 
   /* ── Contact form ── */
-  .contact-box { padding: 12px; }
+  .contact-box {
+    padding: 12px;
+  }
 
   /* ── Footer ── */
-  .gazette-footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .gazette-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 /* ── Phone: 480px and below ──────────────────────────────────────────────── */
 @media (max-width: 480px) {
 
   /* Masthead */
-  .masthead { padding: 10px 12px 6px; }
-  .mast-name { font-size: clamp(32px, 10vw, 46px); }
-  .mast-name span { font-size: 10px; letter-spacing: .12em; }
-  .mast-sub { display: none; } /* Too cramped — hidden on small phones */
+  .masthead {
+    padding: 10px 12px 6px;
+  }
+
+  .mast-name {
+    font-size: clamp(32px, 10vw, 46px);
+  }
+
+  .mast-name span {
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+
+  .mast-sub {
+    font-size: 8px;
+    letter-spacing: .1em;
+  }
 
   /* Nav — 2 columns */
-  .mast-nav { grid-template-columns: repeat(2, 1fr); }
+  .mast-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   /* Content */
-  .content { padding: 0 12px 20px; }
+  .content {
+    padding: 0 12px 20px;
+  }
 
   /* ── Headline ── */
-  .hl1 { font-size: clamp(24px, 8vw, 30px); line-height: 1.08; }
-  .hl2 { font-size: 20px; }
+  .hl1 {
+    font-size: clamp(24px, 8vw, 30px);
+    line-height: 1.08;
+  }
 
-  /* ── Project Cards: single column on phones ── */
-  .proj-grid { grid-template-columns: 1fr; }
+  .hl2 {
+    font-size: 20px;
+  }
 
-  /* ── Classifieds: single column on phones ── */
-  .class-grid { grid-template-columns: 1fr; }
+  /* ── Project Cards & Classifieds: Keep multi-column on phones ── */
+  .proj-grid,
+  .class-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
   /* ── Skills bar narrower ── */
-  .bar { width: 100%; max-width: 120px; }
+  .bar {
+    width: 100%;
+    max-width: 120px;
+  }
 
   /* ── Checklist font ── */
-  .checklist-item { font-size: 12px; }
+  .checklist-item {
+    font-size: 12px;
+  }
 
   /* ── Pipeline box ── */
-  .pipeline-list li { font-size: 12px; }
+  .pipeline-list li {
+    font-size: 12px;
+  }
 
   /* ── Tool palette: single column ── */
-  .tool-palette-grid { grid-template-columns: 1fr; }
-  .tool-item:nth-last-child(-n+2) { border-bottom: 1px dotted var(--rule2); }
-  .tool-item:last-child { border-bottom: none; }
+  .tool-palette-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-item:nth-last-child(-n+2) {
+    border-bottom: 1px dotted var(--rule2);
+  }
+
+  .tool-item:last-child {
+    border-bottom: none;
+  }
 
   /* ── Profile detail rows ── */
-  .detail-label { width: 72px; }
+  .detail-label {
+    width: 72px;
+  }
 
   /* ── Pullquote ── */
-  .pq p { font-size: 15px; }
+  .pq p {
+    font-size: 15px;
+  }
 
   /* ── Footer ── */
-  .gazette-footer { padding: 12px 12px 16px; }
-  .ft-links { gap: 10px; flex-wrap: wrap; }
+  .gazette-footer {
+    padding: 12px 12px 16px;
+  }
+
+  .ft-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 }
 
 /* ── Small Phone: 360px and below ───────────────────────────────────────── */
 @media (max-width: 360px) {
-  .mast-name { font-size: 28px; }
-  .hl1 { font-size: 22px; }
-  .mast-nav { grid-template-columns: repeat(2, 1fr); font-size: 9px; }
-  .content { padding: 0 10px 16px; }
-  .proj-card { padding: 10px 8px; }
-  .class-item { padding: 8px; }
-  .contact-box { padding: 10px; }
+  .mast-name {
+    font-size: 28px;
+  }
+
+  .hl1 {
+    font-size: 22px;
+  }
+
+  .mast-nav {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 9px;
+  }
+
+  .content {
+    padding: 0 10px 16px;
+  }
+
+  .proj-card {
+    padding: 10px 8px;
+  }
+
+  .class-item {
+    padding: 8px;
+  }
+
+  .contact-box {
+    padding: 10px;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP LAYOUT — 1200px and above
+   Full newspaper broadsheet: fills the viewport, multi-column gazette style.
+   Projects panel moves to col 4 of Section A.
+   Section B (grid2) is hidden — Deliverables + Classifieds move to desktop-bottom-row.
+   Mobile / tablet overrides above are NOT affected.
+   ========================================================================== */
+@media (min-width: 1200px) {
+
+  /* ── Expand html/body to full viewport ── */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* ── Paper container fills the full viewport width ── */
+  .paper-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ── Masthead: tighter padding and smaller text on big screens ── */
+  .masthead {
+    padding: 8px 36px 4px;
+  }
+  
+  .mast-meta { font-size: 10.4px; }
+  .ed-badge { font-size: 9.5px; padding: 2px 7px; }
+  .mast-sub { font-size: 10px; margin-top: 4px; }
+  .mast-nav { font-size: 12.5px; }
+  .mast-name span { font-size: clamp(10.5px, 1.45vw, 12.5px); margin-bottom: 3px; }
+
+  /* ── Content area: wider side padding ── */
+  .content {
+    padding: 0 36px 40px;
+  }
+
+  /* ── Footer ── */
+  .gazette-footer {
+    padding: 14px 36px 22px;
+  }
+
+  /* ── Ink stamp: position for wide screens ── */
+  .ink-stamp {
+    top: 80px;
+    right: 44px;
+  }
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     SECTION A: 2-row newspaper layout
+
+     Row 1 (top):  Profile (left, tall) | Lead Story (top-mid) | Projects (top-right)
+     Row 2 (btm):  Profile (continues)  | Also Today (spans mid + right)
+
+     ┌───────────┬────────────────┬───────────┐
+     │  Profile  │   Lead Story     │  Projects  │  ← row 1
+     │           ├────────────────┴───────────┤
+     │           │    Also Today (spanning)       │  ← row 2
+     └───────────┴────────────────────────────┘
+     ────────────────────────────────────────────────────────────────────────── */
+  .grid3 {
+    display: grid;
+    grid-template-columns: 1.2fr 2.1fr 1.3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "profile lead    projects"
+      "profile also    also";
+    gap: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Assign each col to its grid area */
+  .grid3 .profile-col {
+    grid-area: profile;
+  }
+
+  .grid3 .lead-story-col {
+    grid-area: lead;
+  }
+
+  .grid3 .also-today-col {
+    grid-area: also;
+  }
+
+  .grid3 .desktop-projects-col {
+    grid-area: projects;
+  }
+
+  /* Profile spans both rows — fill full height, larger readable text */
+  .grid3 .profile-col {
+    border-right: 1px solid var(--rule2);
+    padding-right: var(--col-gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* Bigger body text in Profile on desktop */
+  .grid3 .profile-col .body {
+    font-size: 13px !important;
+    line-height: 1.9;
+  }
+
+  /* Bigger heading */
+  .grid3 .profile-col .hl4 {
+    font-size: 16px;
+  }
+
+  /* Experience & skills table text */
+  .grid3 .profile-col .sk-table td {
+    font-size: 13px;
+  }
+
+  .grid3 .profile-col .sk-table td:first-child {
+    font-size: 13.5px;
+  }
+
+  /* Pipeline & checklist text */
+  .grid3 .profile-col .pipeline-list li,
+  .grid3 .profile-col .checklist-item {
+    font-size: 13px;
+  }
+
+  /* Experience box text */
+  .grid3 .profile-col .proj-title {
+    font-size: 14px !important;
+  }
+
+  /* Slightly wider skill bar to match bigger text */
+  .grid3 .profile-col .bar {
+    width: 90px;
+  }
+
+  /* Lead Story: right border only (top-mid) */
+  .grid3 .lead-story-col {
+    border-right: 1px solid var(--rule2);
+    padding-left: var(--col-gap);
+    padding-right: var(--col-gap);
+  }
+
+  /* Projects: no right border (top-right corner) */
+  .grid3 .desktop-projects-col {
+    border-right: none;
+    padding-left: var(--col-gap);
+    padding-right: 0;
+  }
+
+  /* Also Today: spans cols 2–3, column direction — stories row on top, pullquote below */
+  .grid3 .also-today-col {
+    border-top: 1px solid var(--rule2);
+    border-right: none;
+    padding-left: var(--col-gap);
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* 3 stories side-by-side in one horizontal row */
+  .also-stories-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    flex: 1;
+  }
+
+  /* Each individual story inside the row */
+  .also-story-item {
+    flex: 1 1 0;
+    padding: 0 var(--col-gap) 12px 0;
+    border-right: 1px solid var(--rule2);
+  }
+
+  .also-story-item:first-child {
+    padding-left: 0;
+  }
+
+  .also-story-item:last-child {
+    border-right: none;
+    padding-right: 0;
+    padding-left: var(--col-gap);
+  }
+
+  .also-story-item:not(:first-child):not(:last-child) {
+    padding-left: var(--col-gap);
+  }
+
+  /* Pullquote — full width below the 3 stories, separated by a top rule */
+  .also-pullquote {
+    border-top: 1px solid var(--rule2);
+    border-bottom: none;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Bigger text inside each Also Today story for readability */
+  .also-story-item .hl3 {
+    font-size: 14px;
+    line-height: 1.35;
+    margin-bottom: 5px;
+  }
+
+  .also-story-item .hl4 {
+    font-size: 13.5px;
+    line-height: 1.35;
+    margin-bottom: 5px;
+  }
+
+  .also-story-item .body {
+    font-size: 12.5px !important;
+    line-height: 1.8;
+  }
+
+  .also-story-item .byline {
+    font-size: 9px !important;
+    margin-bottom: 4px;
+  }
+
+  /* Stretch story items to fill the row height */
+  .also-stories-row {
+    align-items: stretch;
+  }
+
+  /* Reset mobile column ordering on desktop */
+  .grid3 .profile-col,
+  .grid3 .lead-story-col,
+  .grid3 .also-today-col,
+  .grid3 .desktop-projects-col {
+    order: 0;
+  }
+
+  /* Show the Projects column — hidden by default in base CSS */
+  .desktop-projects-col {
+    display: block !important;
+  }
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     SECTION B (grid2): Hidden entirely on desktop
+     — Projects are now in Section A col 4
+     — Deliverables + Classifieds are in desktop-bottom-row below
+     ────────────────────────────────────────────────────────────────────────── */
+  .grid2.reveal-section,
+  hr.rule-t#projects {
+    display: none;
+  }
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     DESKTOP BOTTOM ROW: Deliverables (left) + Classifieds (right)
+     ────────────────────────────────────────────────────────────────────────── */
+  .desktop-bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 2px solid var(--ink);
+  }
+
+  /* Show the deliverables summary inside desktop-bottom-row */
+  .desktop-deliverables-summary {
+    display: block;
+  }
+
+  /* Column padding inside the bottom row */
+  .desktop-bottom-row .col {
+    padding: 14px var(--col-gap) 14px 0;
+    border-right: 1px solid var(--rule2);
+  }
+
+  .desktop-bottom-row .col:last-child {
+    border-right: none;
+    padding-left: var(--col-gap);
+    padding-right: 0;
+  }
+
+  /* Each bottom-row column fills its height and spaces content evenly */
+  .desktop-bottom-row .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Classifieds: fill height, space ads evenly */
+  .desktop-bottom-row .classifieds {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .desktop-bottom-row .class-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+
+  /* Bigger text in classifieds ads */
+  .desktop-bottom-row .class-body {
+    font-size: 12.5px;
+    line-height: 1.75;
+  }
+
+  /* Hide the mobile-only classifieds section on desktop */
+  .mobile-classifieds-section {
+    display: none;
+  }
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     CONTACT: better proportions on wide screens
+     ────────────────────────────────────────────────────────────────────────── */
+  .grid2r {
+    grid-template-columns: 300px 1fr;
+  }
+
+  /* ── Skills bar: wider on desktop ── */
+  .bar {
+    width: 110px;
+  }
+
+  /* ── Headline sizes: breathe on wide screens ── */
+  .hl1 {
+    font-size: clamp(28px, 2.4vw, 44px);
+  }
+
+  .hl2 {
+    font-size: clamp(17px, 1.8vw, 26px);
+  }
+
+  .mast-name {
+    font-size: clamp(47px, 5.7vw, 78px);
+  }
+
+}
+
+/* ── Extra wide (1440px+): wider proportions ── */
+@media (min-width: 1440px) {
+  .grid3 {
+    grid-template-columns: 1.2fr 2.3fr 1.4fr;
+  }
+}
+
+/* ── Ultra-wide (1920px+): cap paper width for readability ── */
+@media (min-width: 1920px) {
+  .paper-container {
+    max-width: 1820px;
+    margin: 0 auto;
+  }
+}
+
+/* Hide the mobile-only pullquote duplicate by default */
+.lead-story-pq {
+  display: none;
+}
+
+/* ==========================================================================
+   TOUCH DEVICE OVERRIDES (Mobile & Tablets)
+   Reorders sections visually without breaking the 1024px desktop layout.
+   ========================================================================== */
+@media (pointer: coarse) {
+  
+  /* 1. Hide Forex Calc */
+  .also-stories-row .story-preview-box:nth-child(3) {
+    display: none !important;
+  }
+  
+  /* Hide the original pullquote in Also Today */
+  .also-today-col > .also-pullquote {
+    display: none !important;
+  }
+  
+  /* Show the new pullquote under Lead Story */
+  .lead-story-pq {
+    display: block !important;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  
+  /* 2. Reorder main content sections */
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .date-rule { order: 1; }
+  
+  /* 3. Top Grid Layout Tweaks */
+  #about { order: 2; }
+  #about.grid3 {
+    grid-template-columns: 0.75fr 1.65fr 1fr !important;
+  }
+  
+  /* Bring Classifieds up immediately below the top grid */
+  #classifieds-mobile {
+    display: block !important;
+    order: 3;
+    padding: 16px 0 0 0;
+    margin-bottom: -10px;
+  }
+  
+  #projects { order: 4; margin-top: 24px; }
+  .grid2 { order: 5; }
+  
+  /* Deliverables (Keep at bottom, hide duplicate desktop classifieds) */
+  #classifieds {
+    display: block !important;
+    order: 6;
+  }
+  
+  #classifieds .col:last-child {
+    display: none !important;
+  }
+  
+  #contact { order: 7; }
+  .grid2r { order: 8; }
+  
+  /* 4. Force strict edge-to-edge scaling to destroy blank gaps */
+  html, body, .paper-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
 }

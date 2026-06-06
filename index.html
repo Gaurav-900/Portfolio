@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=900, shrink-to-fit=no">
+  <meta name="viewport" content="width=1024">
   <title>The Gaurav Sharma Gazette — Full-Stack Developer & Aspiring Cloud Engineer Portfolio</title>
   <meta name="description"
     content="Official developer portfolio of Gaurav Sharma. Discover full-stack applications like GS Paint and Forex Calculator. Netlify deployed.">
@@ -85,29 +85,29 @@
       <section class="grid3 reveal-section" id="about">
 
         <!-- COL 1: INDEX + PROFILE -->
-        <article class="col reveal-col">
-          <div style="margin-top:13px">
+        <article class="col reveal-col profile-col">
+          <div style="margin-top:12px">
             <span class="label outline">Profile</span>
-            <div class="hl4">Who Is Gaurav Sharma?</div>
+            <div class="hl4" style="font-size: 17px; margin-bottom: 8px;">Who Is Gaurav Sharma?</div>
             <p class="body" style="font-size:11px">BCA student (Class of 2027), freelance web developer, and aspiring
               cloud architect. Experienced in
               building and deploying production-ready web applications, with a growing focus on AWS and cloud
               technologies.
             </p>
-            <hr class="rule-l">
+            <hr class="rule-l" style="margin: 24px 0;">
             <p class="body" style="font-size:11px;font-style:italic;color:var(--ink3)">"I build responsive, scalable web
               applications with a strong focus on performance and user experience — and I am heading toward cloud
               infrastructure next."</p>
           </div>
 
           <!-- Experience -->
-          <hr class="rule-l" style="margin-top:11px;">
-          <span class="label" style="margin-bottom:8px;display:block;">Experience</span>
-          <div class="experience-box" style="margin-bottom:8px;">
-            <div class="proj-title" style="font-size:13px; margin-bottom:2px;">AI Agents Training Program · Coplur</div>
+          <hr class="rule-l" style="margin: 28px 0;">
+          <span class="label" style="margin-bottom:12px;display:block;">Experience</span>
+          <div class="experience-box" style="margin-bottom:12px;">
+            <div class="proj-title" style="font-size:13px; margin-bottom:4px;">AI Agents Training Program · Coplur</div>
             <div style="font-size:10px; color:var(--ink3); margin-top:2px;">June 2026 – Present · Jaipur, Rajasthan
             </div>
-            <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+            <div style="margin-top:10px; display:flex; gap:6px; flex-wrap:wrap;">
               <span class="experience-tag">PYTHON</span>
               <span class="experience-tag">LLM WORKFLOWS</span>
               <span class="experience-tag">ORCHESTRATION</span>
@@ -115,9 +115,9 @@
           </div>
 
           <!-- Skills: The Developer's Technical Register -->
-          <hr class="rule-l" style="margin-top:14px;">
-          <span class="label" style="margin-bottom:4px;display:block;">Skills — B1</span>
-          <div class="hl4" style="margin-bottom:6px;">The Developer's Technical Register</div>
+          <hr class="rule-l" style="margin: 28px 0;">
+          <span class="label" style="margin-bottom:8px;display:block;">Skills — B1</span>
+          <div class="hl4" style="margin-bottom:12px;">The Developer's Technical Register</div>
           <table class="sk-table">
             <thead>
               <tr>
@@ -244,12 +244,19 @@
         </article>
 
         <!-- COL 2: LEAD STORY — SERVERLESS ADMIN DASHBOARD -->
-        <article class="col reveal-col">
+        <article class="col reveal-col lead-story-col">
           <span class="label red animate-pulse">Lead Story</span>
           <h1 class="hl1">Built a Fully Serverless Portfolio CMS on Firebase</h1>
           <div class="deck">Gaurav Sharma engineers a 100% serverless, glassmorphism-styled project management platform
             leveraging React, Vite, and Firebase Cloud Functions.</div>
           <div class="byline"><span class="byloc">JAIPUR, RAJASTHAN</span> Technology Desk</div>
+
+          <!-- Lead Story Image -->
+          <figure class="news-photo-figure">
+            <a href="https://gs-admin-project-managment.netlify.app" target="_blank" class="news-photo-link">
+              <img class="news-photo" src="Img/Project-Dashboard.png" alt="Serverless Portfolio Dashboard">
+            </a>
+          </figure>
 
           <!-- Project Specs Infographic -->
           <div class="news-infographic" style="margin-bottom:9px;">
@@ -291,88 +298,190 @@
               automated 15-minute data-wipe Cloud Function was developed. Any data created by a guest user is
               systematically purged, ensuring the dashboard permanently resets itself.</p>
           </div>
-        </article>
 
-        <!-- COL 3: SECONDARY STORIES -->
-        <article class="col reveal-col">
-          <span class="label">Also Today</span>
-
-          <!-- ACS -->
-          <div class="story-preview-box">
-            <div class="hl3">ACS: Industrial Web Platform for Automation Firm</div>
-            <div class="byline" style="font-size:8px"><span class="byloc">INDUSTRY DESK</span></div>
-            <p class="body" style="font-size:11px">Modernising service discovery, inquiry handling, and job applications
-              for a Jaipur-based industrial automation firm.</p>
-            <button class="expand-btn" data-target="acs-side">Read More &#9660;</button>
-
-            <div class="article-full" id="acs-side">
-              <h4 class="hl4"
-                style="margin-top:4px;margin-bottom:6px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.04em;">
-                Architecture &amp; Email Delivery</h4>
-              <p class="body" style="font-size:11px">A custom React UI backed by RESTful APIs using Node.js and
-                Express.js was chosen for full control over data flow. Crucially, secure direct email delivery was
-                implemented via backend routing to bypass the unreliability of third-party frontend mailers.</p>
-            </div>
-          </div>
-
-          <hr class="rule-l">
-
-          <!-- GS Paint -->
-          <div class="story-preview-box">
-            <div class="hl3">GS Paint: Full-Featured Browser Painting App with Watercolour &amp; Touch Support</div>
-            <div class="byline" style="font-size:8px"><span class="byloc">TECHNOLOGY DESK</span></div>
-            <p class="body" style="font-size:11px">Solving the problem of bloated web applications, this project aimed
-              to create a fully functional, cross-device painting suite without relying on massive external canvas
-              libraries.</p>
-            <!-- GS Paint Tool Palette Infographic -->
-            <div class="news-infographic" style="margin:8px 0;">
-              <div class="infographic-title">Tool Palette</div>
-              <div class="tool-palette-grid">
-                <div class="tool-item">&#9998; Pencil</div>
-                <div class="tool-item">&#9646; Marker</div>
-                <div class="tool-item">&#9733; Watercolour</div>
-                <div class="tool-item">&#9685; Airbrush</div>
-                <div class="tool-item">&#9723; Shapes</div>
-                <div class="tool-item">&#9003; Eraser</div>
-                <div class="tool-item">&#9632; Fill Bucket</div>
-                <div class="tool-item">&#8635; Undo / Redo</div>
-              </div>
-            </div>
-            <button class="expand-btn" data-target="gspaint">Read More &#9660;</button>
-
-            <div class="article-full" id="gspaint">
-              <h4 class="hl4"
-                style="margin-top:4px;margin-bottom:6px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.04em;">
-                Native APIs &amp; State Management</h4>
-              <p class="body" style="font-size:11px">The native HTML5 Canvas API paired with Vanilla JS was selected to
-                ensure maximum performance and zero dependency overhead. A custom unlimited undo/redo stack was
-                engineered to track canvas state changes without memory leaks, operating alongside a unified touch/mouse
-                event handler.</p>
-            </div>
-          </div>
-
-          <hr class="rule-l">
-
-          <!-- Pullquote -->
-          <blockquote class="pq">
+          <!-- Pullquote duplicate for mobile layout -->
+          <blockquote class="pq also-pullquote lead-story-pq">
             <p>"Build things that work. Then build things that are remembered."</p>
             <cite>— on shipping production software</cite>
           </blockquote>
 
-          <hr class="rule-l">
+        </article>
 
-          <!-- Forex Calculator brief -->
-          <div class="story-preview-box">
-            <div class="hl4">Forex Calculator: Calculating Volatile Assets</div>
-            <p class="body" style="font-size:11px">Needed a reliable way to calculate risk-based lot sizing across
-              volatile asset classes. Integrated ExchangeRate-API for real-time currency conversion rather than static
-              tables, and developed custom instrument-aware pip logic to automatically adjust decimal precision based on
-              the asset type (standard pair vs JPY cross).
-            </p>
-          </div>
+        <!-- COL 3: SECONDARY STORIES -->
+        <article class="col reveal-col also-today-col">
+          <span class="label">Also Today</span>
 
+          <!-- 3 stories side-by-side row -->
+          <div class="also-stories-row">
+
+            <!-- ACS -->
+            <div class="story-preview-box also-story-item">
+              <div class="hl3">ACS: Industrial Web Platform for Automation Firm</div>
+              <div class="byline" style="font-size:8px"><span class="byloc">INDUSTRY DESK</span></div>
+
+              <!-- ACS Image -->
+              <figure class="news-photo-figure">
+                <a href="https://advancecontrolsystems.com" target="_blank" class="news-photo-link">
+                  <img class="news-photo" src="Img/ACS.png" alt="ACS Industrial Web Platform">
+                </a>
+              </figure>
+              <p class="body" style="font-size:11px">Modernising service discovery, inquiry handling, and job
+                applications
+                for a Jaipur-based industrial automation firm.</p>
+              <div id="acs-side" style="margin-top: 8px; padding-top: 9px; border-top: 1px dashed var(--rule2);">
+                <h4 class="hl4"
+                  style="margin-top:4px;margin-bottom:6px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.04em;">
+                  Architecture &amp; Email Delivery</h4>
+                <p class="body" style="font-size:11px">A custom React UI backed by RESTful APIs using Node.js and
+                  Express.js was chosen for full control over data flow. Crucially, secure direct email delivery was
+                  implemented via backend routing to bypass the unreliability of third-party frontend mailers.</p>
+              </div>
+            </div>
+
+            <!-- GS Paint -->
+            <div class="story-preview-box also-story-item">
+              <div class="hl3">GS Paint: Full-Featured Browser Painting App with Watercolour &amp; Touch Support</div>
+              <div class="byline" style="font-size:8px"><span class="byloc">TECHNOLOGY DESK</span></div>
+
+              <!-- GS Paint Image -->
+              <figure class="news-photo-figure">
+                <a href="https://gs-paint.netlify.app/" target="_blank" class="news-photo-link">
+                  <img class="news-photo" src="Img/Paint.png" alt="GS Paint Browser Painting App">
+                </a>
+              </figure>
+              <p class="body" style="font-size:11px">Solving the problem of bloated web applications, this project aimed
+                to create a fully functional, cross-device painting suite without relying on massive external canvas
+                libraries.</p>
+              <!-- GS Paint Tool Palette Infographic -->
+              <div class="news-infographic" style="margin:8px 0;">
+                <div class="infographic-title">Tool Palette</div>
+                <div class="tool-palette-grid">
+                  <div class="tool-item">&#9998; Pencil</div>
+                  <div class="tool-item">&#9646; Marker</div>
+                  <div class="tool-item">&#9733; Watercolour</div>
+                  <div class="tool-item">&#9685; Airbrush</div>
+                  <div class="tool-item">&#9723; Shapes</div>
+                  <div class="tool-item">&#9003; Eraser</div>
+                  <div class="tool-item">&#9632; Fill Bucket</div>
+                  <div class="tool-item">&#8635; Undo / Redo</div>
+                </div>
+              </div>
+              <button class="expand-btn" data-target="gspaint">Read More &#9660;</button>
+
+              <div class="article-full" id="gspaint">
+                <h4 class="hl4"
+                  style="margin-top:4px;margin-bottom:6px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.04em;">
+                  Native APIs &amp; State Management</h4>
+                <p class="body" style="font-size:11px">The native HTML5 Canvas API paired with Vanilla JS was selected
+                  to
+                  ensure maximum performance and zero dependency overhead. A custom unlimited undo/redo stack was
+                  engineered to track canvas state changes without memory leaks, operating alongside a unified
+                  touch/mouse
+                  event handler.</p>
+              </div>
+            </div>
+
+            <!-- Forex Calculator brief -->
+            <div class="story-preview-box also-story-item">
+              <div class="hl4">Forex Calculator: Calculating Volatile Assets</div>
+
+              <!-- Forex Image -->
+              <figure class="news-photo-figure">
+                <a href="https://gs-forex-calculator.netlify.app/" target="_blank" class="news-photo-link">
+                  <img class="news-photo" src="Img/Forex.png" alt="Forex Calculator Interface">
+                </a>
+              </figure>
+              <p class="body" style="font-size:11px">Needed a reliable way to calculate risk-based lot sizing across
+                volatile asset classes. Integrated ExchangeRate-API for real-time currency conversion rather than static
+                tables, and developed custom instrument-aware pip logic to automatically adjust decimal precision based
+                on
+                the asset type (standard pair vs JPY cross).
+              </p>
+            </div>
+
+          </div><!-- /.also-stories-row -->
+
+          <!-- Pullquote — full width below the 3 stories -->
+          <blockquote class="pq also-pullquote">
+            <p>"Build things that work. Then build things that are remembered."</p>
+            <cite>— on shipping production software</cite>
+          </blockquote>
 
         </article>
+
+
+        <!-- COL 4 (DESKTOP ONLY): PROJECTS — shown on wide screens, hidden on mobile/tablet -->
+        <article class="col reveal-col desktop-projects-col">
+          <span class="label red">Projects — A3</span>
+          <h2 class="hl2" style="font-size:16px">From the Newsroom Floor</h2>
+          <div class="byline"><span class="byloc">PORTFOLIO DESK</span> Full Catalogue</div>
+
+          <div class="proj-grid" style="grid-template-columns:1fr; gap:8px; margin-top:8px;">
+
+            <!-- Serverless Admin Dashboard -->
+            <div class="proj-card proj-card-pro" style="grid-column:1/-1">
+              <div class="proj-pro-banner">★ &nbsp;Flagship — 100% Serverless</div>
+              <span class="proj-card-tag" style="background:var(--accent)">Platform Engineering</span>
+              <div class="proj-title" style="font-size:13px">Serverless Project Admin Dashboard</div>
+              <div class="proj-tech">React · Vite · Firebase · Firestore</div>
+              <div class="proj-body" style="font-size:11px">Authenticated admin, dynamic project management, public
+                view.</div>
+              <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap">
+                <a class="proj-link hover-underline" href="https://gs-admin-project-managment.netlify.app/admin"
+                  target="_blank">→ LIVE DASHBOARD</a>
+                <a class="proj-link hover-underline"
+                  href="https://github.com/Gaurav-900/Serverless-Projects-Management-Dashboard" target="_blank">→
+                  GITHUB</a>
+              </div>
+            </div>
+
+            <!-- ACS -->
+            <div class="proj-card proj-card-pro" style="grid-column:1/-1">
+              <div class="proj-pro-banner">★ &nbsp;Professional Client — Production</div>
+              <span class="proj-card-tag" style="background:#1d3a5f">Industrial Automation</span>
+              <div class="proj-title" style="font-size:13px">Advanced Control System (ACS)</div>
+              <div class="proj-tech">React · Node.js · Express.js · Netlify</div>
+              <div class="proj-body" style="font-size:11px">Web presence & inquiry platform for industrial automation
+                firm.</div>
+              <div style="margin-top:6px">
+                <a class="proj-link hover-underline" href="https://advancecontrolsystems.com" target="_blank">→
+                  advancecontrolsystems.com</a>
+              </div>
+            </div>
+
+            <!-- GS Paint -->
+            <div class="proj-card">
+              <span class="proj-card-tag" style="background:#6b3fa0">Creative Tool</span>
+              <div class="proj-title">GS Paint</div>
+              <div class="proj-tech">Canvas API · Vanilla JS · Touch</div>
+              <div class="proj-body" style="font-size:11px">Browser painting app — pencil, watercolour, airbrush, touch.
+              </div>
+              <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+                <a class="proj-link hover-underline" href="https://gs-paint.netlify.app/" target="_blank">&rarr;
+                  LIVE</a>
+                <a class="proj-link hover-underline" href="https://github.com/Gaurav-900/GS_Paint_App" target="_blank">→
+                  GITHUB</a>
+              </div>
+            </div>
+
+            <!-- Forex Calculator -->
+            <div class="proj-card">
+              <span class="proj-card-tag" style="background:#1a5020">FinTech</span>
+              <div class="proj-title">Forex Calculator Suite</div>
+              <div class="proj-tech">JavaScript · ExchangeRate-API v6</div>
+              <div class="proj-body" style="font-size:11px">P&amp;L &amp; lot-sizing — all FX pairs, Gold, Silver, live
+                rates.</div>
+              <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+                <a class="proj-link hover-underline" href="https://gs-forex-calculator.netlify.app/" target="_blank">→
+                  LIVE</a>
+                <a class="proj-link hover-underline" href="https://github.com/Gaurav-900/Forex-Calculator"
+                  target="_blank">→ GITHUB</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
       </section>
 
 
@@ -381,7 +490,7 @@
 
 
       <section class="grid2 reveal-section">
-        <article class="col reveal-col">
+        <article class="col reveal-col projects-main-col">
           <span class="label">Projects — A3</span>
           <h2 class="hl2">Four Productions From the Newsroom Floor</h2>
           <div class="byline"><span class="byloc">PORTFOLIO DESK</span> Full Catalogue</div>
@@ -455,7 +564,7 @@
         </article>
 
         <!-- DELIVERABLES COL -->
-        <article class="col reveal-col" id="skills">
+        <article class="col reveal-col deliverables-col" id="skills">
           <span class="label">Deliverables — B1</span>
           <h2 class="hl2" style="font-size:18px">What Ships With Every Project</h2>
           <div class="byline" style="font-size:8px"><span class="byloc">PORTFOLIO DESK</span> Quality Standard</div>
@@ -484,8 +593,65 @@
 
       </section>
 
-      <!-- ═══ CLASSIFIEDS ═══ -->
-      <section class="reveal-section" id="classifieds">
+      <!-- ═══ CLASSIFIEDS + DELIVERABLES BOTTOM ROW (desktop: side-by-side) ═══ -->
+      <div class="desktop-bottom-row reveal-section" id="classifieds">
+
+        <!-- Left: Deliverables summary (desktop only companion) -->
+        <article class="col reveal-col desktop-deliverables-summary">
+          <span class="label">Deliverables — B1</span>
+          <h2 class="hl2" style="font-size:17px">What Ships With Every Project</h2>
+          <div class="byline" style="font-size:8px"><span class="byloc">PORTFOLIO DESK</span> Quality Standard</div>
+          <p class="body" style="font-size:11px;margin-bottom:10px">Every production delivery includes a complete set of
+            professional-grade components — no half-measures, no shortcuts.</p>
+          <hr class="rule-l">
+          <div class="checklist-box">
+            <div class="checklist-title">Deliverables</div>
+            <ul class="checklist">
+              <li class="checklist-item done">Responsive React frontend</li>
+              <li class="checklist-item done">RESTful API (Node.js + Express)</li>
+              <li class="checklist-item done">Direct email delivery integration</li>
+              <li class="checklist-item done">Live deployment</li>
+              <li class="checklist-item done">Clean, documented codebase</li>
+            </ul>
+          </div>
+          <hr class="rule-l">
+          <blockquote class="pq" style="margin-top:12px">
+            <p style="font-size:14px">"The stack is a tool. The thinking is the skill."</p>
+            <cite>— on software engineering fundamentals</cite>
+          </blockquote>
+        </article>
+
+        <!-- Right: Classifieds -->
+        <article class="col reveal-col">
+          <div class="classifieds" style="border:none;background:transparent;margin-top:0;padding:0">
+            <h3 class="class-title" style="text-align:left;font-size:16px;padding-bottom:6px">Classified Advertisements
+            </h3>
+            <div class="class-grid" style="grid-template-columns:1fr">
+              <div class="class-item">
+                <span class="class-tag">Services Offered</span>
+                <div class="class-body">
+                  <strong>WEB APPLICATION DEVELOPMENT.</strong> React + Node.js + Supabase / Firebase. MVPs, dashboards,
+                  admin panels, e-commerce, landing pages. Responsive and production-deployed. Turnaround: 1–3 weeks.
+                  <span class="class-ref">→ worksforgauravsharma@gmail.com</span>
+                </div>
+              </div>
+              <div class="class-item">
+                <span class="class-tag">Opportunity Sought</span>
+                <div class="class-body">
+                  <strong>CLOUD / FULL-STACK INTERNSHIP.</strong> BCA student, graduating 2027. Seeking internship or
+                  junior role in cloud infrastructure or full-stack engineering. Remote or Jaipur-based. Immediate
+                  availability.
+                  <span class="class-ref">→ Open to negotiation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ═══ CLASSIFIEDS (mobile/tablet only — hidden on desktop) ═══ -->
+      <section class="reveal-section mobile-classifieds-section" id="classifieds-mobile">
         <div class="classifieds">
           <h3 class="class-title">Classified Advertisements</h3>
           <div class="class-grid">
